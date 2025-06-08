@@ -22,7 +22,7 @@
 	    stage('Push image to Hub'){
             steps{
                 script{
-                   #withCredentials([string(credentialsId: 'dockerhub', variable: 'dockerhub')]) {
+                   //withCredentials([string(credentialsId: 'dockerhub', variable: 'dockerhub')]) {
                    sh 'docker login -u sivalakshmanna -p Siva9493@'
 
               }
