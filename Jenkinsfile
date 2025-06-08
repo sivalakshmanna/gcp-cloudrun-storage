@@ -26,8 +26,8 @@
 	    stage('Push image to Hub'){
             steps{
                 script{
-                   withCredentials([usernamePassword(credentialsId: 'docker1', usernameVariable: 'docker1', passwordVariable: 'docker1')]) {
-                   sh 'docker login -u ${docker1} -p ${docker1}'
+                   withCredentials([usernamePassword(credentialsId: 'docker1', usernameVariable: 'docker11', passwordVariable: 'docker1')]) {
+                   sh 'docker login -u ${docker11} -p ${docker1}'
 
               }
 		}
