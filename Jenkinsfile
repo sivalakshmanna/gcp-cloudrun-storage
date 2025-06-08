@@ -13,7 +13,8 @@
             steps{
                 script{
                     echo 'docker image build'
-	            sh 'cd 1-local-storage'		
+	            sh 'cd 1-local-storage'	
+	            sh 'ls '		
 		    sh 'docker build -t sivalakshmanna/siva:${BUILD_NUMBER} .'
                 }
             }
