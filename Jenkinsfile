@@ -14,7 +14,7 @@
                 script{
                     echo 'docker image build'
 	            sh 'cd 1-local-storage'		
-		    sh 'sudo docker build -t sivalakshmanna/siva:${BUILD_NUMBER} .'
+		    sh 'docker build -t sivalakshmanna/siva:${BUILD_NUMBER} .'
                 }
             }
         }		
