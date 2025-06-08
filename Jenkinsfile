@@ -25,16 +25,13 @@
         		
 	    stage('Push image to Hub'){
             steps{
-                   //sh 'docker login -u sivalakshmanna -p Siva9493@'
-		    script{
-                   withCredentials([string(credentialsId: 'docker1', variable: 'docker1')]) {
-	           sh 'docker login -u sivalakshmanna -p ${docker1}'
-		   }
+                   sh 'docker login -u sivalakshmanna -p Siva9493@'
+		    
                    sh 'docker push sivalakshmanna/siva:${BUILD_NUMBER}'
                    sh 'docker run -d -p 7000:8080 sivalakshmanna/siva:${BUILD_NUMBER}'
                 }
             }
-        }
+        
 		
       
     }
