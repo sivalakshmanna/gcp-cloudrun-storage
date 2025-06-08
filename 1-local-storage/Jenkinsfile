@@ -17,7 +17,7 @@
                     sh 'ls'
                     sh 'cd 1-local-storage'
                     sh 'ls'
-		            sh 'docker build -t sivalakshmanna/siva:${BUILD_NUMBER} 1-local-storage/Dockerfile'
+		            sh 'docker build -t sivalakshmanna/siva:${BUILD_NUMBER} .'
             }
         }		
         		
