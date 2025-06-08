@@ -26,6 +26,7 @@
                    sh 'docker login -u sivalakshmanna -p ${dockerhub}'
 
               }
+		}
                    sh 'docker push sivalakshmanna/siva:${BUILD_NUMBER}'
                    sh 'docker run -d -p 7000:8080 sivalakshmanna/siva:${BUILD_NUMBER}'
                 }
