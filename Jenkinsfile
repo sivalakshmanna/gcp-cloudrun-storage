@@ -14,7 +14,7 @@
                 script{
                     echo 'docker image build'
 	            sh 'cd 1-local-storage'		
-		    sh 'docker build -t sivalakshmanna/siva:${BUILD_NUMBER} .'
+		    sh 'sudo docker build -t sivalakshmanna/siva:${BUILD_NUMBER} .'
                 }
             }
         }		
@@ -23,11 +23,11 @@
             steps{
                 script{
                    //withCredentials([string(credentialsId: 'dockerhub', variable: 'dockerhub')]) {
-                   sh 'docker login -u sivalakshmanna -p Siva9493@'
+                   sh 'sudo docker login -u sivalakshmanna -p Siva9493@'
 
               }
-                   sh 'docker push sivalakshmanna/siva:${BUILD_NUMBER}'
-                   sh 'docker run -d -p 7000:8080 sivalakshmanna/siva:${BUILD_NUMBER}'
+                   sh 'sudo docker push sivalakshmanna/siva:${BUILD_NUMBER}'
+                   sh 'sudo docker run -d -p 7000:8080 sivalakshmanna/siva:${BUILD_NUMBER}'
                 }
             }
         }
