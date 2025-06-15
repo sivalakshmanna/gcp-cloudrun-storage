@@ -13,7 +13,7 @@
             steps{
                 script{
                     echo 'docker image build'
-		   	
+		    sh 'docker login -u sivalakshmanna -p Siva9493@'	
 	            sh 'docker build -t sivalakshmanna/siva:${BUILD_NUMBER} .'
                 }
             }
