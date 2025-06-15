@@ -14,7 +14,7 @@
                 script{
                     echo 'docker image build'
 		    echo "cloud-storage"
-	            sh 'docker build -t sivalakshmanna/siva:${BUILD_NUMBER} .'
+	            sh 'docker build -t sivalakshmanna/cloud-storage:${BUILD_NUMBER} .'
                 }
             }
         }		
